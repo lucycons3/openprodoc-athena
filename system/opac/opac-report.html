@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados - Archivo Histórico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+</head>
+<body class="OPACBODY" id="top">
+  <!--CABECERA-->
+  <!--
+  <div class="row cookies" style="display: none;">
+    <p>We use <a href="#">cookies</a> </p>
+    <img src="img/cross.svg" alt="#" title="#" id="acepto-cookies">
+  </div>
+  -->
+
+
+  <header>
+    <div class="row">
+      <div class="col-4">
+        <div class="logo">
+          <a href="" target="_blank" title="#">
+            <img src="img/athena.svg" alt="#" title="#">
+          </a>
+        </div>
+        <div class="archivo-historico">
+          <h1>HISTORICAL ARCHIVE</h1>
+        </div>
+      </div>
+      <div class="col-8 menu">
+        <p class="idioma"><br>
+          <!--
+          <a href="#" id="english" class="ingles">Inglés</a><span id="enTube"> |</span>
+          <a href="#" id="spanish" class="spanish">Castellano</a><span id="esTube"> |</span>
+          <a href="#" id="euskera" class="vasco">Euskera</a><span id="euTube"> | </span>
+          <a href="#" id="galician" class="galego">Gallego</a><span id="gaTube"> | </span>
+          <a href="#" id="catalan" class="catala">Catalán</a>
+          -->
+        </p>
+        <nav class="topNav">
+          <a href="#" title="Home">Home</a><span> |</span>
+          <a href="#" title="Contribution Module">Contribution Module</a><span> | </span>
+          <a href="#" title="Help Page">Help Page</a>
+          <a href="#" class="icon">
+            <img src="img/menu.svg" alt="Menu" title="Menu" />
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!--CABECERA-END-->
+  <div class="main">
+
+    <h1>Resultados de la búsqueda</h1>
+    <p class="col-12"><strong><span>Número de resultados</span>:&nbsp;
++@OPD_TOTALREC</strong></p>
+<div class="inline">
+@OPD_DOCSLOOP_S
+<div class="col-12 result">
+<div class="col-1 inline">
+<p>
+<a target="_blank" href="SendDoc?Id=
++@OPD_VAL_ATTR_PDId
++">
+<img src="img/file.svg" alt="Documento"></img>
+</a>
+</p>
+</div>
+<div class="col-10 inline resultdata">
+<h3>
+<a target="_blank" href="SendDoc?Id=
++@OPD_VAL_ATTR_PDId
+">
+@OPD_REF_ATTR_Title
+</a>
+</h3>
+@OPD_ATTRLOOP_S?- ACL,DocDate,DocType,LockedBy,MimeType,Name,ParentId,PDAutor,PDdate,PDid,PurgeDate,Reposit,Status,Version,Title
+<p>
+<strong>
++@OPD_UNAME_ATTR_*
++:
+</strong>
+@OPD_VALLOOP_S
++@OPD_REF_ATTR_*
++&nbsp;&nbsp;&nbsp;
+@OPD_VALLOOP_E
+</p>
+@OPD_ATTRLOOP_E
+</div>
+</div>
+@OPD_DOCSLOOP_E
+</div>
+
+  <a href="http://localhost:8080/ProdocWeb2/OPAC?Id=OPAC_DocEx">
+    <div class="newsearch">Nueva búsqueda</div>
+  </a>
+</div>
+  <a href="#top">
+    <img src="img/arrow-top.svg" alt="Subir arriba" class="arrow">
+  </a>
+</body>
+<footer class="OPACFOOTER">
+  <p class="left"><a href="#"><img src="img/athena-negativo.svg" style="width:250px" alt="#"></a></p>
+  <p class="center">|</p>
+  <p class="right">Website powered by <a href="https://jhierrot.github.io/openprodoc/index_ES.html" class="link">OpenProdoc</a>, licensed under AGPLv3 license</p>
+</footer>
+  <!--
+  <script src="js/langs/en_EN.js" type="text/javascript"></script>
+  <script src="js/langs/es_CA.js" type="text/javascript"></script>
+  <script src="js/langs/es_EU.js" type="text/javascript"></script>
+  <script src="js/langs/es_GL.js" type="text/javascript"></script>
+-->
+  <script src="js/main.js" type="text/javascript"></script>
+</html>

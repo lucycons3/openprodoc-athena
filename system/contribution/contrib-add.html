@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Participa - Archivo Histórico</title>
+        <link rel="shortcut icon" href="img/OpenProdoc.ico" type="image/x-icon"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    </head>
+    <body class="OPACBODY" >
+      <!--CABECERA-->
+      <!--
+      <div class="row cookies" style="display: none;">
+        <p>We use <a href="#">cookies</a> </p>
+        <img src="img/cross.svg" alt="#" title="#" id="acepto-cookies">
+      </div>
+      -->
+      <header>
+        <div class="row">
+          <div class="col-4">
+            <div class="logo">
+              <a href="#" target="_blank" title="">
+                <img src="img/athena.svg" alt="#" title="#">
+              </a>
+            </div>
+            <div class="archivo-historico">
+              <h1>HISTORICAL ARCHIVE</h1>
+            </div>
+          </div>
+          <div class="col-8 menu">
+            <p class="idioma"><br>
+              <!--
+              <a href="#" id="english" class="ingles">Inglés</a><span id="enTube"> |</span>
+              <a href="#" id="spanish" class="spanish">Castellano</a><span id="esTube"> |</span>
+              <a href="#" id="euskera" class="vasco">Euskera</a><span id="euTube"> | </span>
+              <a href="#" id="galician" class="galego">Gallego</a><span id="gaTube"> | </span>
+              <a href="#" id="catalan" class="catala">Catalán</a>
+              -->
+            </p>
+            <nav class="topNav">
+              <a href="#" title="Home">Home</a><span> |</span>
+              <a href="#" title="Contribution Module">Contribution Module</a><span> | </span>
+              <a href="#" title="Help Page">Help Page</a>
+              <a href="#" class="icon">
+                <img src="img/menu.svg" alt="Menu" title="Menu" />
+              </a>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!--CABECERA-END-->
+
+
+      <form action="ContribRes" method="post" class="" enctype="multipart/form-data">
+      <div  class="main">
+
+
+        <div class=""><legend class="CONTRIBLEG">&nbsp;&nbsp;Descripción del documento&nbsp;&nbsp;</legend>
+         <p class="note" align="center">Por favor, indícanos el título del documento. Los demás campos son opcionales.</p>
+         <div>
+          @CONTRIB_DOCFIELDS@
+          <div>
+            <div class="CONTRIBLABELFILEUP adddocument">Archivo a aportar</div>
+            <p class="note" align="center">Tamaño máximo: 20 MB.</p>
+            <input type="file" class="CONTRIBFILEUP" name="FileUp">
+            <input  class="CONTRIBBUT adddocumentbut" type="submit" value="Añadir">
+          </div>
+          <div class="botexandhelp">
+            <a class="" href="contrib-help.html" target="_blank">
+              <div class="exitbutton col-6">
+                Ayuda
+              </div>
+            </a>
+            <a class="" href="ContribList" >
+              <div class="exitbutton col-6">
+                Volver a archivo personal
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+       </div>
+        <input type="hidden" name="CONTRIB_DT" value="@CONTRIBDTVAL@">
+     </form>
+     <footer class="" >
+       <p class="left"><a href="#"><img src="img/athena-negativo.svg" style="width:250px" alt="#"></a></p>
+       <p class="center">|</p>
+       <p class="right">Website powered by <a href="https://jhierrot.github.io/openprodoc/index_ES.html" class="link">OpenProdoc</a>, licensed under AGPLv3 license</p>
+     </footer>
+     <!--
+     <script src="js/langs/es_EU.js" type="text/javascript"></script>
+     <script src="js/langs/es_CA.js" type="text/javascript"></script>
+     <script src="js/langs/es_GL.js" type="text/javascript"></script>
+     <script src="js/langs/en_EN.js" type="text/javascript"></script>
+     -->
+     <script src="js/main.js" type="text/javascript"></script>
+     <script src="js/OPDCombo2.3.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Archivo Histórico</title>
+    <script>
+      @LISTFIELDS@
+      function ExecMenu(IdType)
+      {
+      var L=IdType.length;
+      for (i = 0; i < ListF.length; i++)
+      {
+      if ((ListF[i].substring(0,L)+"_")!=(IdType+"_"))
+        document.getElementById(ListF[i]).style.display="none";
+      else
+        document.getElementById(ListF[i]).style.display="inline-table";
+      }
+      }
+    </script>
+    <link rel="shortcut icon" href="img/OpenProdoc.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+</head>
+<body class="OPACBODY" onload="ExecMenu('@FIRSTTYPE@');">
+  <!--CABECERA-->
+  <!--
+  <div class="row cookies" style="display: none;">
+    <p>We use <a href="#">cookies</a> </p>
+    <img src="img/cross.svg" alt="#" title="#" id="acepto-cookies">
+  </div>
+  -->
+  <header>
+    <div class="row">
+      <div class="col-4">
+        <div class="logo">
+          <a href="#" target="_blank" title="Título del logo">
+            <img src="img/athena.svg" alt="#" title="#">
+          </a>
+        </div>
+        <div class="archivo-historico">
+          <h1>HISTORICAL ARCHIVE</h1>
+        </div>
+      </div>
+      <div class="col-8 menu">
+        <p class="idioma"><br>
+          <!--
+          <a href="#" id="english" class="ingles">Inglés</a><span id="enTube"> |</span>
+          <a href="#" id="spanish" class="spanish">Castellano</a><span id="esTube"> |</span>
+          <a href="#" id="euskera" class="vasco">Euskera</a><span id="euTube"> | </span>
+          <a href="#" id="galician" class="galego">Gallego</a><span id="gaTube"> | </span>
+          <a href="#" id="catalan" class="catala">Catalán</a>
+          -->
+        </p>
+        <nav class="topNav">
+          <a href="#" title="Home">Home</a><span> |</span>
+          <a href="#" title="Contribution Module">Contribution Module</a><span> | </span>
+          <a href="#" title="Help Page">Help Page</a>
+          <a href="#" class="icon">
+            <img src="img/menu.svg" alt="Menu" title="Menu" />
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!--CABECERA-END-->
+
+  <div class="main">
+    <div class="row">
+      <form action="OPAC2"  target="_blank" method="post" class="">
+                <div class="row">
+
+                  <div class="OPACDT col-6">
+                    @DTLABEL@
+                  </div>
+                  <div class="TD_OPACCOMB col-6">
+                    <div class"OPACCOMB">
+                      <select name="DT" onChange="ExecMenu(this.options[this.selectedIndex].value)">
+                        @DTVALS@
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="OPACFTLAB col-6 withnote" >@FTLABEL@</div>
+                  <div class="TD_OPACFTINP col-6">
+                    <input class="OPACFTINP" type="text" name="FT">
+                  </div>
+                </div>
+
+                <table style="width:100%">
+                  <div>@OPACFIELDS@</div>
+                </table>
+                <div class="row">
+                  <div class="OPACFORMATLAB col-6" >@FormatLabel@</div>
+                  <div class="TD_OPACFORMATCOMB col-6" style="padding-bottom:4rem">
+                    <div><select name="FORMAT_REP" style="width:100%">@FORMATVALS@</select></div>
+                    </span>
+                  </div>
+                </div>
+                <div class="row">
+                  <a class="" href="@URLHELP@" target="_blank">
+                    <div class="col-6 OPACHELP">Ayuda</div>
+                  </a>
+                  <div class="search col-6">
+                    <input class="OPACBUT" type="submit" value="Buscar"/>
+                  </div>
+                </div>
+              <!-- </fieldset> -->
+            <!-- </div> -->
+          <!-- </div> -->
+        </form>
+    </div>
+  </div>
+
+  <footer class="OPACFOOTER">
+    <p class="left"><a href="#"><img src="img/athena-negativo.svg" style="width:250px" alt="#"></a></p>
+    <p class="center">|</p>
+    <p class="right">Website powered by <a href="https://jhierrot.github.io/openprodoc/index_ES.html" class="link">OpenProdoc</a>, licensed under AGPLv3 license</p>
+  </footer>
+  <!--
+  <script src="js/langs/en_EN.js" type="text/javascript"></script>
+  <script src="js/langs/es_CA.js" type="text/javascript"></script>
+  <script src="js/langs/es_EU.js" type="text/javascript"></script>
+  <script src="js/langs/es_GL.js" type="text/javascript"></script>
+  -->
+  <script src="js/OPDCombo2.3.js" type="text/javascript"></script>
+  <script src="js/main.js" type="text/javascript"></script>
+
+  </body>
+</html>

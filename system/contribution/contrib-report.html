@@ -1,0 +1,36 @@
+@OPD_DOCSLOOP_S
+<div class="col-5 maincontribreport blanco">
+  <div class="CONTRIBFS">
+
+  <H4>Documentos aportados</H4>
+
+
+@OPD_DOCSLOOP_S
+    <div class="result">
+<div class="col-1 inline"><a target="_blank" href="SendDoc?Id=
++@OPD_VAL_ATTR_PDId
++">
+<img src="img/file.svg" alt="Documento"></img></a>
+      </div>
+      <div class="col-11 inline">
+<h3 class="col-11"><a target="_blank" href="SendDocCont?Id=
++@OPD_VAL_ATTR_PDId
++">
++@OPD_REF_ATTR_Title
+</a></h3>
+@OPD_ATTRLOOP_S?- ACL,DocDate,DocType,LockedBy,MimeType,Name,ParentId,PDAutor,PDdate,PDid,PurgeDate,Reposit,Status,Version,Title
+<p class="col-11"><strong>
++@OPD_UNAME_ATTR_*
++:
+</strong>
+@OPD_VALLOOP_S
++@OPD_REF_ATTR_*
++&nbsp;&nbsp;&nbsp;
+@OPD_VALLOOP_E
+</p>
+@OPD_ATTRLOOP_E
+      </div>
+    </div>
+@OPD_DOCSLOOP_E
+</div>
+</div>
