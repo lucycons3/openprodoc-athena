@@ -89,7 +89,7 @@ Every time you create a new custom page, check out that all the links in the HTM
 
 ## Multi-language support
 
-1. Write a translation file following the template available in `js/langs/en_ES.js/`.
+1. Write a translation file following the template available in `js/langs/en_ES.js`.
 2. Uncomment the section below in every HTML file that you want to translate:
 
 ```
@@ -104,7 +104,7 @@ Every time you create a new custom page, check out that all the links in the HTM
 3. Link to the translation file in the `href` attribute. For example:
 
 ```
-<a href="/js/langs/en_ES.js/" id="spanish" class="spanish">Castellano</a><span id="esTube"> |</span>
+<a href="/js/langs/en_ES.js" id="spanish" class="spanish">Castellano</a><span id="esTube"> |</span>
 ```
 
 ## Cookies consent message
@@ -122,19 +122,19 @@ If you need to display a cookes consent message in your site, just uncomment the
 
 ## Screenshots
 
-![OPAC](https://github.com/lucycons3/openprodoc-athena/blob/master/screenshots/demo-opac.png)
+![OPAC](https://github.com/lucycons3/openprodoc-athena/blob/master/screenshots/demo-opac.png)*OPAC*
 
-![OPAC Results](https://github.com/lucycons3/openprodoc-athena/blob/master/screenshots/demo-opac-results.png)
+![OPAC Results](https://github.com/lucycons3/openprodoc-athena/blob/master/screenshots/demo-opac-results.png)*OPAC Results*
 
-![Help Page](https://github.com/lucycons3/openprodoc-athena/blob/master/screenshots/demo-help-page.png)
+![Help Page](https://github.com/lucycons3/openprodoc-athena/blob/master/screenshots/demo-help-page.png)*Help Page*
 
-![Contribution Login](https://github.com/lucycons3/openprodoc-athena/blob/master/screenshots/demo-contrib-login.png)
+![Contribution Login](https://github.com/lucycons3/openprodoc-athena/blob/master/screenshots/demo-contrib-login.png)*Contribution Login*
 
-![Contribution List](https://github.com/lucycons3/openprodoc-athena/blob/master/screenshots/demo-contrib-list.png)
+![Contribution List](https://github.com/lucycons3/openprodoc-athena/blob/master/screenshots/demo-contrib-list.png)*Contribution List*
 
-![Contribution Add](https://github.com/lucycons3/openprodoc-athena/blob/master/screenshots/demo-contrib-add.png)
+![Contribution Add](https://github.com/lucycons3/openprodoc-athena/blob/master/screenshots/demo-contrib-add.png)*Contribution Add*
 
-![Contribution Result](https://github.com/lucycons3/openprodoc-athena/blob/master/screenshots/demo-contrib-res.png)
+![Contribution Result](https://github.com/lucycons3/openprodoc-athena/blob/master/screenshots/demo-contrib-res.png)*Contribution Result*
 
 ## Additional information
 
