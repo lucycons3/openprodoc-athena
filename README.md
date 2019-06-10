@@ -49,7 +49,7 @@ Browsers:
 
 ## Install
 
-1. Upload all the content of `system/` to the `System` folder of your OpenProdoc instance. Notice that 'help-page.html' is a report template, so it needs to be uploaded with the document type `Reports/export of Docs and Folders`.
+1. Upload all the content of `system/` to the `System` folder of your OpenProdoc instance. Notice that 'opac-report.html' and 'contrib-report.html' are report templates, so they need to be uploaded with the document type `Reports/export of Docs and Folders`.
 2. Copy all the content of `css/` under the directory `../webapps/css/` of your OpenProdoc instance.
 3. Copy all the content of `js/` under the directory `../webapps/js/` of your OpenProdoc instance.
 4. Copy all the content of `img/` under the directory `../webapps/img/` of your OpenProdoc instance.
@@ -109,7 +109,7 @@ Every time you create a new custom page, check out that all the links in the HTM
 
 ## Cookies consent message
 
-If you need to display a cookes consent message in your site, just uncomment the section below in every HTML file:
+If you need to display a cookies consent message in your site, just uncomment the section below in every HTML file:
 
 ```
 <!--
